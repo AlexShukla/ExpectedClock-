@@ -1,0 +1,18 @@
+}
+function closeDialogOnClickOutside(e) {
+  if (e.target === languageDialog) {
+    closeDialog();
+  }
+}
+
+// dialog close button event
+closeButton.addEventListener('click', closeDialog);
+
+// current language display - open dialog with lang buttons
+currentLangDisplay.addEventListener('click', openDialog);
+//console.log(locale);
+
+// initalize
+drawClockFaces();
+rotateClockFaces();
+setCurrentLangDisplay(languageFlags.find(lang => lang.code === locale));
